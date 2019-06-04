@@ -5,6 +5,9 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
+from . import models
+from . import forms
+
 
 def sign_in(request):
     form = AuthenticationForm()
@@ -54,3 +57,22 @@ def sign_out(request):
     logout(request)
     messages.success(request, "You've been signed out. Come back soon!")
     return HttpResponseRedirect(reverse('home'))
+
+
+def user_profile_display(request):
+    """View to display profile information"""
+    user = models.UserProfile()
+    profile = models.UserProfile.objects.all()
+    return render(request, 'accounts/display_profile.html', {'profile': profile,
+                                                             'user': user})
+
+
+def user_profile_edit(request):
+    """View that allows User to change their profile information"""
+    pass
+
+
+def password_change(request):
+    """View that allows User to change their password"""
+    pass
+

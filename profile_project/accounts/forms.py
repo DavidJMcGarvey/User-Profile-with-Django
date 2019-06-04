@@ -1,9 +1,11 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
+from django.contrib.auth.models import User
 
 from . import models
 
 
-class UserForm(forms.ModelForm):
+class UserCreateForm(UserCreationForm):
     class Meta:
         model = models.UserProfile
         fields = [
@@ -19,3 +21,7 @@ class UserForm(forms.ModelForm):
             'favorite_color',
             'bio',
         ]
+
+
+
+
