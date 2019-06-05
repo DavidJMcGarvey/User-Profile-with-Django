@@ -6,7 +6,6 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 from . import models
-from . import forms
 
 
 def sign_in(request):
@@ -61,10 +60,12 @@ def sign_out(request):
 
 def user_profile_display(request):
     """View to display profile information"""
-    user = models.UserProfile()
-    profile = models.UserProfile.objects.all()
-    return render(request, 'accounts/display_profile.html', {'profile': profile,
-                                                             'user': user})
+    profile = models.UserProfile()
+    if request.method == 'POST':
+        profile = models.UserProfile(request.POST)
+    return render(request, 'accounts/display_profile.html', {
+        'profile': profile
+    })
 
 
 def user_profile_edit(request):
