@@ -1,6 +1,25 @@
 {% extends "layout.html" %}
 {% load static from staticfiles %}
 
-{% block content %}
-{{ profile.first_name }}
+{% block body %}
+    <p>Avatar:</p>
+    <h2>{{ profile.avatar }}</h2>
+    <p>First Name:</p>
+    <h2>{{ profile.first_name }}</h2>
+    <p>Last Name:</p>
+    <h2>{{ profile.last_name }}</h2>
+    <p>Birthday:</p>
+    <h2>{{ profile.birthday }}</h2>
+    <p>Email:</p>
+    <h2>{{ profile.email }}</h2>
+    <p>Hometown:</p>
+    <h2>{{ profile.hometown }}</h2>
+    <p>Hobby:</p>
+    <h2>{{ profile.hobby }}</h2>
+    <p>Favorite Animal:</p>
+    <h2>{{ profile.favorite_animal }}</h2>
+    <p>Favorite Color:</p>
+    <h2>{{ profile.favorite_color }}</h2>
+    <p>Bio:</p>
+    <h2>{{ profile.bio }}</h2>
 {% endblock %}

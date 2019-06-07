@@ -1,18 +1,45 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser
+from PIL import Image
+import glob, os
+
+size = (128, 128)
+
+for infile in glob.glob('assets/images/face.jpg'):
+    file, ext = os.path.splitext(infile)
+    img = Image.open('assets/images/face.jpg')
+    img.thumbnail(size)
+    img.save(file + ".thumbnail", "JPEG")
+
+img = Image.open('assets/images/face.thumbnail')
 
 
-class UserProfile(models.Model):
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-    birthday = models.DateField(max_length=255)
-    email = models.EmailField()
-    confirm_email = models.EmailField()
-    avatar = models.ImageField()
-    hometown = models.CharField(max_length=255)
-    hobby = models.CharField(max_length=255)
-    favorite_animal = models.CharField(max_length=255)
-    favorite_color = models.CharField(max_length=255)
-    bio = models.TextField()
+class UserProfile(AbstractBaseUser):
+    first_name = models.CharField(max_length=255, default='Dave')
+    last_name = models.CharField(max_length=255, default='McGarvey')
+    birthday = models.DateField(max_length=255, default='1990-01-15')
+    email = models.EmailField(default='dave@email.com')
+    confirm_email = models.EmailField(default='dave@email.com')
+    avatar = models.ImageField(img)
+    hometown = models.CharField(max_length=255, default='Denver')
+    hobby = models.CharField(max_length=255, default='Buckets')
+    favorite_animal = models.CharField(max_length=255, default='Gianni')
+    favorite_color = models.CharField(max_length=255, default='Blue')
+    bio = models.TextField(default='I am a nerd for love.')
+
+    REQUIRED_FIELDS = [
+        'first_name',
+        'last_name',
+        'birthday',
+        'email',
+        'confirm_email',
+        'avatar',
+        'hometown',
+        'hobby',
+        'favorite_animal',
+        'favorite_color',
+        'bio'
+    ]
 
     def __str__(self):
         return self.first_name + " " + self.last_name

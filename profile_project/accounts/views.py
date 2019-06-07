@@ -61,8 +61,6 @@ def sign_out(request):
 def user_profile_display(request):
     """View to display profile information"""
     profile = models.UserProfile()
-    if request.method == 'POST':
-        profile = models.UserProfile(request.POST)
     return render(request, 'accounts/display_profile.html', {
         'profile': profile
     })
@@ -70,7 +68,8 @@ def user_profile_display(request):
 
 def user_profile_edit(request):
     """View that allows User to change their profile information"""
-    pass
+    profile = models.UserProfile()
+    return render(request, 'accounts/edit_profile.html', {'profile': profile})
 
 
 def password_change(request):
