@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="990a6230-9432-4bc9-894d-76f848b63c1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/profile_project/accounts/templates/accounts/edit_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile_project/assets/images/face.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_project/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile_project/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_project/accounts/templates/accounts/display_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile_project/accounts/templates/accounts/display_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_project/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile_project/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_project/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile_project/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_project/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/profile_project/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -282,25 +275,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559353555324</updated>
-      <workItem from="1559353564596" duration="28192000" />
+      <workItem from="1559353564596" duration="28342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28192000" />
+    <option name="totallyTimeSpent" value="28342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13519314" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13519314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
