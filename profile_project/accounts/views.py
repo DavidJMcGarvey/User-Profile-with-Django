@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
-from . import models
+from . import models, forms
 
 
 def sign_in(request):
@@ -69,7 +69,12 @@ def user_profile_display(request):
 def user_profile_edit(request):
     """View that allows User to change their profile information"""
     profile = models.UserProfile()
-    return render(request, 'accounts/edit_profile.html', {'profile': profile})
+    form = forms.UserProfileForm()
+    if request.method == 'POST':
+        form = forms.UserProfileForm(request.POST)
+        return HttpResponseRedirect(reverse('edit'))
+    return render(request, 'accounts/edit_profile.html', {'profile': profile,
+                                                          'form': form})
 
 
 def password_change(request):
